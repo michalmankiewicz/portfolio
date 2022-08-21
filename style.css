@@ -425,7 +425,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 101;
-  max-width: 55rem;
+  max-width: 75rem;
+  width: 60%;
   padding-bottom: 1.6rem;
 
   border-radius: 20px;
@@ -457,8 +458,8 @@ body {
 }
 
 .project-tag {
-  font-size: 1.2rem;
-  padding: 0.6rem 1.2rem;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.6rem;
   font-weight: 500;
   background-color: var(--white-color);
   text-transform: uppercase;
@@ -478,11 +479,11 @@ body {
   /* grid-template-columns: 55fr 45fr; */
   /* grid-template-rows: auto auto; */
   column-gap: 3.6rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.4rem;
 }
 
 .project-description-container h3 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-bottom: 0.4rem;
   color: var(--primary-color);
 }
@@ -492,7 +493,7 @@ body {
 }
 
 .project-description-container {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.4;
 }
 
@@ -520,9 +521,9 @@ body {
 
 .btn-small {
   border: none;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   background-color: var(--primary-color);
-  padding: 0.8rem 1.6rem;
+  padding: 1.2rem 2.4rem;
   border-radius: 50px;
   color: var(--white-color);
 }
@@ -532,22 +533,22 @@ body {
   background-color: #1873cc;
 }
 
-.project-buttons-2 {
+.project-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
+  gap: 2.4rem;
   margin-right: 2.4rem;
 }
 
-.project-button-2 {
+.project-button {
   text-decoration: none;
   display: flex;
   align-items: center;
 }
 
-.project-button-2 ion-icon {
-  font-size: 1.6rem;
+.project-button ion-icon {
+  font-size: 2rem;
   margin-top: 0.2rem;
 }
 
@@ -556,7 +557,7 @@ body {
   top: 0.8rem;
   right: 0.8rem;
 
-  font-size: 3rem;
+  font-size: 4.2rem;
   background: none;
   border: none;
   color: var(--white-color);

@@ -58,6 +58,7 @@ navLinks.forEach((link) =>
     closeMenuBtn.classList.add("hidden");
     navEl.classList.remove("nav-open");
     menuBtn.classList.remove("hidden");
+    document.body.classList.remove("no-scroll");
 
     chosenSection.scrollIntoView({ behavior: "smooth" });
   })

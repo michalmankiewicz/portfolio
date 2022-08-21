@@ -25,6 +25,11 @@ Font sizes (px)
     max-width: 100rem;
     /* padding: 1.2rem 2.4rem; */
   }
+
+  .project-details {
+    /* max-width: 61rem;
+    width: 80%; */
+  }
 }
 
 @media (max-width: 60rem) {
@@ -74,6 +79,12 @@ Font sizes (px)
   .projects {
     gap: 3.6rem;
   }
+
+  .project-details {
+    /* max-width: 85rem; */
+    width: 80%;
+  }
+
   .contact-details {
     font-size: 2rem;
     width: 100%;
@@ -187,6 +198,33 @@ Font sizes (px)
 
   .techs {
     flex-wrap: wrap;
+  }
+
+  .project-details {
+    width: 90%;
+  }
+
+  .project-tags {
+    margin: 0 0.8rem;
+    bottom: 0.4rem;
+  }
+
+  .project-tag {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .project-description-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+
+  .project-description-container h3 {
+    font-size: 2rem;
+  }
+
+  .project-buttons {
+    gap: 1.6rem;
+    margin: 0;
   }
 
   .contact-details p {
