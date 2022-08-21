@@ -1,0 +1,218 @@
+/*  
+Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* BELOW 1312px */
+
+@media (max-width: 82rem) {
+  .content {
+    max-width: 110rem;
+  }
+}
+
+/* BELOW 1152px */
+
+@media (max-width: 72rem) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .content {
+    max-width: 100rem;
+    /* padding: 1.2rem 2.4rem; */
+  }
+}
+
+@media (max-width: 60rem) {
+  html {
+    font-size: 56.25%;
+  }
+
+  /* .header {
+    padding-left: 0.8rem;
+  } */
+
+  .nav {
+    margin-right: 7rem;
+  }
+
+  .nav-list {
+    gap: 3.6rem;
+  }
+
+  .content {
+    max-width: 80rem;
+    /* padding: 1.2rem 2.4rem; */
+  }
+
+  .description {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .img-about {
+    height: 30rem;
+    width: 20rem;
+  }
+
+  .desc-container {
+    width: 100%;
+  }
+
+  .desc-container p {
+    font-size: 2rem;
+  }
+
+  .tech {
+    font-size: 1.6rem;
+  }
+
+  .projects {
+    gap: 3.6rem;
+  }
+  .contact-details {
+    font-size: 2rem;
+    width: 100%;
+  }
+}
+
+/* BELOW 752px */
+
+@media (max-width: 47rem) {
+  html {
+    font-size: 50%;
+  }
+
+  /* .logo {
+    width: 12rem;
+    height: 4rem;
+  } */
+
+  .content {
+    max-width: 73rem;
+  }
+}
+
+@media (max-width: 39rem) {
+  .content {
+    padding: 1.2rem 2.4rem;
+    border-radius: 0;
+    /* margin: 0 1.6rem; */
+  }
+
+  .section-about .content,
+  .section-contact .content {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .header {
+    margin-bottom: 4.8rem;
+    padding-left: 1.6rem;
+  }
+
+  .nav {
+    position: fixed;
+    margin: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(100%);
+
+    transition: all 0.3s ease-in;
+  }
+
+  .nav-list {
+    gap: 8rem;
+  }
+
+  .nav-item {
+    font-size: 3.6rem;
+    color: var(--white-color);
+    letter-spacing: 2px;
+  }
+
+  .nav-open {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-buttons {
+    display: block;
+  }
+  .social-btn {
+    display: none;
+  }
+
+  /* .img-container {
+    height: 28rem;
+    width: 28rem;
+  } */
+  .description-short h1 {
+    font-size: 5.2rem;
+  }
+  .description-short p {
+    font-size: 2.4rem;
+  }
+
+  .img-about {
+    height: 24rem;
+    width: 16rem;
+  }
+
+  .desc-container p {
+    margin-bottom: 1.2rem;
+  }
+
+  .techs {
+    flex-wrap: wrap;
+  }
+
+  .contact-details p {
+    margin-bottom: 1.2rem;
+  }
+
+  .platforms {
+    width: 100%;
+  }
+  .platform {
+    margin-bottom: 1.2rem;
+  }
+
+  .platform-link ion-icon {
+    font-size: 3rem;
+  }
+
+  .footer-text {
+    font-size: 1.6rem;
+  }
+}
+
+/*  
+Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
