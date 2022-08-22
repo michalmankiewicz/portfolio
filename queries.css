@@ -12,6 +12,10 @@ Font sizes (px)
   .content {
     max-width: 110rem;
   }
+
+  .project-details {
+    width: 55%;
+  }
 }
 
 /* BELOW 1152px */
@@ -27,8 +31,24 @@ Font sizes (px)
   }
 
   .project-details {
-    /* max-width: 61rem;
-    width: 80%; */
+    width: 65%;
+  }
+
+  .platform-link {
+    transform: none;
+  }
+
+  .platform-link-phone span,
+  .platform-link-email span {
+    display: none;
+  }
+
+  .platform-link-phone:after {
+    content: "604-554-972";
+  }
+
+  .platform-link-email:after {
+    content: "michal.mankiewicz47@gmail.com";
   }
 }
 
@@ -82,7 +102,7 @@ Font sizes (px)
 
   .project-details {
     /* max-width: 85rem; */
-    width: 80%;
+    width: 85%;
   }
 
   .contact-details {
@@ -113,6 +133,12 @@ Font sizes (px)
     padding: 1.2rem 2.4rem;
     border-radius: 0;
     /* margin: 0 1.6rem; */
+  }
+
+  .section-introduction {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
   }
 
   .section-about .content,
@@ -176,6 +202,11 @@ Font sizes (px)
     display: none;
   }
 
+  .scroll-to-nav {
+    width: 8rem;
+    height: 8rem;
+  }
+
   /* .img-container {
     height: 28rem;
     width: 28rem;
@@ -185,6 +216,16 @@ Font sizes (px)
   }
   .description-short p {
     font-size: 2.4rem;
+  }
+
+  .btn {
+    font-size: 2.4rem;
+    text-transform: none;
+    padding: 1.6rem 3.2rem;
+  }
+
+  .btn-github {
+    display: block;
   }
 
   .img-about {

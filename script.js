@@ -20,6 +20,15 @@ const header = document.querySelector(".header");
 const menuBtn = document.querySelector(".btn-menu");
 const closeMenuBtn = document.querySelector(".btn-close-menu");
 const navEl = document.querySelector(".nav");
+const scrollToNavBtn = document.querySelector(".scroll-to-nav");
+const sectionIntroduction = document.querySelector(".section-introduction");
+
+window.addEventListener("load", () => {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+  window.scrollTo(0, 0);
+});
 
 seeMoreBtns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
@@ -63,9 +72,6 @@ navLinks.forEach((link) =>
     chosenSection.scrollIntoView({ behavior: "smooth" });
   })
 );
-
-const scrollToNavBtn = document.querySelector(".scroll-to-nav");
-const sectionIntroduction = document.querySelector(".section-introduction");
 
 // console.log(scrollToNavBtn.classList, sectionAbout);
 

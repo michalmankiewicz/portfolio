@@ -253,6 +253,7 @@ body {
 .btn-container {
   display: flex;
   justify-content: center;
+  gap: 1.2rem;
 }
 
 .btn {
@@ -262,6 +263,7 @@ body {
   padding: 1.2rem 2.4rem;
   border-radius: 50px;
   color: var(--white-color);
+  text-transform: uppercase;
 
   transition: all 0.3s ease-in;
 }
@@ -270,6 +272,10 @@ body {
   cursor: pointer;
   background-color: #1873cc;
   transform: scale(1.1);
+}
+
+.btn-github {
+  display: none;
 }
 
 /* ABOUT SECTION*/
@@ -411,10 +417,10 @@ body {
 }
 
 .project.portfolio {
-  background-image: url("img/myhabits\ logo.PNG");
+  background-image: url("img/portfolio-logo.PNG");
 }
 .project.portfolio:hover {
-  background-image: url("img/3x2\ myHabit.PNG");
+  background-image: url("img/3x2\ portfolio.PNG");
 }
 
 /* PROJECT DETAILS */
@@ -425,8 +431,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 101;
-  max-width: 75rem;
-  width: 60%;
+  max-width: 85rem;
+  width: 47%;
   padding-bottom: 1.6rem;
 
   border-radius: 20px;
@@ -479,7 +485,7 @@ body {
   /* grid-template-columns: 55fr 45fr; */
   /* grid-template-rows: auto auto; */
   column-gap: 3.6rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.2rem;
 }
 
 .project-description-container h3 {
@@ -521,9 +527,9 @@ body {
 
 .btn-small {
   border: none;
-  font-size: 2.4rem;
+  font-size: 2rem;
   background-color: var(--primary-color);
-  padding: 1.2rem 2.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 50px;
   color: var(--white-color);
 }
@@ -537,7 +543,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.4rem;
+  gap: 1.6rem;
   margin-right: 2.4rem;
 }
 
@@ -565,6 +571,11 @@ body {
 
 .btn-exit:hover {
   cursor: pointer;
+}
+
+.project-details-portfolio img,
+.project-details-myhabits img {
+  filter: brightness(0.9);
 }
 
 .overlay {

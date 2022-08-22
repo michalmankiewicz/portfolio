@@ -65,14 +65,15 @@
       <section class="section section-shifted section-introduction">
         <div class="content">
           <div class="img-container">
-            <img src="img/IMG-1279 (2).jpg" alt="My photo" />
+            <img src="img/introduction.jpg" alt="My photo" />
           </div>
           <div class="description-short">
             <h1>Hi, I'm <span>Michal</span></h1>
             <p>Front-end developer eager to join your team</p>
           </div>
           <div class="btn-container">
-            <button class="btn btn-resume">RESUME</button>
+            <a class="btn btn-resume">Resume</a>
+            <a class="btn btn-github">GitHub</a>
           </div>
         </div>
       </section>
@@ -164,21 +165,20 @@
         <div class="content">
           <h2 class="title">Projects</h2>
           <div class="projects">
+            <div class="project myhabits">
+              <div class="blur"></div>
+              <button class="see-more" data-type="myhabits">Learn more</button>
+            </div>
             <div class="project movie-doctor">
               <div class="blur"></div>
               <button class="see-more" data-type="movie-doctor">
                 Learn more
               </button>
             </div>
-            <div class="project myhabits">
-              <div class="blur"></div>
-              <button class="see-more" data-type="myhabits">Learn more</button>
-            </div>
+            
             <div class="project portfolio">
               <div class="blur"></div>
-              <button class="see-more" data-type="movie-doctor">
-                Learn more
-              </button>
+              <button class="see-more" data-type="portfolio">Learn more</button>
             </div>
           </div>
         </div>
@@ -195,6 +195,7 @@
               <div class="project-tag">HTML5</div>
               <div class="project-tag">CSS</div>
               <div class="project-tag">JS ES6</div>
+              <div class="project-tag">FIRST PROJECT</div>
               <div class="project-tag">Parcel</div>
               <div class="project-tag">NPM</div>
             </div>
@@ -204,10 +205,10 @@
             <div class="project-description">
               <h3>Description</h3>
               <p>
-                Habit tracker aplication which allows to track four following
+                Habit tracker application which allows user to track four following
                 activities: programming, sports, reading books and sleep.
                 Project includes calendar, activity list (sorted by date) and
-                also statistics section with information about streaks and sums.
+                also statistics section with information about activitie's streaks and sums.
               </p>
             </div>
 
@@ -219,6 +220,15 @@
                 </li>
 
                 <li>
+                  <ion-icon name="checkmark-outline"></ion-icon>Basics of HTML
+                  and CSS
+                </li>
+
+                <li>
+                  <ion-icon name="checkmark-outline"></ion-icon>Using external libraries (NPM)
+                </li>
+
+                <li>
                   <ion-icon name="checkmark-outline"></ion-icon>ES6 modules
                 </li>
                 <li><ion-icon name="checkmark-outline"></ion-icon>MVC</li>
@@ -226,10 +236,7 @@
                   <ion-icon name="checkmark-outline"></ion-icon>Bundling with
                   Parcel
                 </li>
-                <li>
-                  <ion-icon name="checkmark-outline"></ion-icon>Basics of HTML
-                  and CSS
-                </li>
+                
               </ul>
             </div>
           </div>
@@ -273,8 +280,8 @@
               <h3>Description</h3>
               <p>
                 Application based on The Movie Data Base(TMDB) allow user to
-                search, rate and save bookmarks of his favourite movies. Website
-                is fully responsie, ease to use on mobile or tablet.
+                search favourite movies based on queries or categories. Furthermore app gives the option to save bookmarks like "Add to favourite" and "Rate".
+                 Website is fully responsive, easy to use on mobile or tablet.
               </p>
             </div>
 
@@ -295,6 +302,69 @@
                 <li>
                   <ion-icon name="checkmark-outline"></ion-icon>Bundling with
                   Parcel
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-buttons">
+            <a
+              class="btn-small project-button"
+              href="https://movie-doctor.netlify.app/"
+              >Live demo<ion-icon name="chevron-forward-outline"></ion-icon
+            ></a>
+            <a
+              class="btn-small project-button"
+              href="https://github.com/michalmankiewicz/MovieDoctor"
+              >GitHub <ion-icon name="chevron-forward-outline"></ion-icon
+            ></a>
+          </div>
+          <button class="btn-exit">
+            <ion-icon name="exit-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="project-details project-details-portfolio hidden">
+          <div class="project-img-container">
+            <img
+              class="project-details-img"
+              src="img/project_portfolio.PNG"
+              alt=""
+            />
+
+            <div class="project-tags">
+              <div class="project-tag">HTML5</div>
+              <div class="project-tag">CSS</div>
+              <div class="project-tag">JS ES6</div>
+              <div class="project-tag">Responsive</div>
+              <div class="project-tag">Parcel</div>
+              <div class="project-tag">NPM</div>
+            </div>
+          </div>
+
+          <div class="project-description-container">
+            <div class="project-description">
+              <h3>Description</h3>
+              <p>
+                Portfolio application presenting information about me and
+                show my learning purpose projects. Website is fully responsive, easy to use on mobile or tablet.
+              </p>
+            </div>
+
+            <div class="what-i-learnt">
+              <h3>What I've learned</h3>
+              <ul>
+                <li>
+                  <ion-icon name="checkmark-outline"></ion-icon>The Intersection Observer API
+                </li>
+                <li>
+                  <ion-icon name="checkmark-outline"></ion-icon>Responsive web
+                  design
+                </li>
+                <li>
+                  <ion-icon name="checkmark-outline"></ion-icon>Deploying project with GIT
+                </li>
+                
+                  <ion-icon name="checkmark-outline"></ion-icon>Design skills
                 </li>
               </ul>
             </div>
