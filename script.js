@@ -1,28 +1,28 @@
 "use strict";
 
-// window.addEventListener("hashchange", function (e) {
-//   const sectionType = window.location.hash.slice(1);
-
-//   const sectionEls = document.querySelectorAll(".section");
-//   sectionEls.forEach((section) => {
-//     if (section.classList.contains(`section-${sectionType}`))
-//       section.classList.remove("hidden");
-//     else section.classList.add("hidden");
-//   });
-// });
-
-// PROJECT DETAILS HANDLING
+// Project Elements
 const seeMoreBtns = document.querySelectorAll(".see-more");
 const overlay = document.querySelector(".overlay");
-const navLinks = document.querySelectorAll(".nav-item");
-const header = document.querySelector(".header");
 
+// Navigation navbar
+const header = document.querySelector(".header");
+const navEl = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav-item");
+const scrollToNavBtn = document.querySelector(".scroll-to-nav");
+
+// Navigation mobile
 const menuBtn = document.querySelector(".btn-menu");
 const closeMenuBtn = document.querySelector(".btn-close-menu");
-const navEl = document.querySelector(".nav");
-const scrollToNavBtn = document.querySelector(".scroll-to-nav");
+
+// Sections
+const sections = document.querySelectorAll(".section");
 const sectionIntroduction = document.querySelector(".section-introduction");
 
+//////////////////////////////
+// NAVIGATING THROUGH SECTIONS
+//////////////////////////////
+
+// Restarting scroll position
 window.addEventListener("load", () => {
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
@@ -30,54 +30,23 @@ window.addEventListener("load", () => {
   window.scrollTo(0, 0);
 });
 
-seeMoreBtns.forEach((btn) =>
-  btn.addEventListener("click", function (e) {
-    const target = e.target;
-    const projectType = target.dataset.type;
-
-    const projectDetails = document.querySelector(
-      `.project-details-${projectType}`
-    );
-
-    console.log(projectType, projectDetails);
-
-    overlay.classList.remove("hidden");
-    projectDetails.classList.remove("hidden");
-
-    const exitBtn = projectDetails.querySelector(".btn-exit");
-
-    console.log(exitBtn);
-
-    [exitBtn, overlay].forEach((el) =>
-      el.addEventListener("click", function (e) {
-        console.log("click");
-        overlay.classList.add("hidden");
-        projectDetails.classList.add("hidden");
-      })
-    );
-  })
-);
-
+// Navigation through sections
 navLinks.forEach((link) =>
   link.addEventListener("click", function (e) {
-    console.log(link);
     const linkName = link.dataset.section;
     const chosenSection = document.querySelector(`.section-${linkName}`);
 
-    closeMenuBtn.classList.add("hidden");
-    navEl.classList.remove("nav-open");
-    menuBtn.classList.remove("hidden");
-    document.body.classList.remove("no-scroll");
-
     chosenSection.scrollIntoView({ behavior: "smooth" });
+
+    // Navigation UI (only visible on mobile)
+    closeNavigationMobile();
   })
 );
 
-// console.log(scrollToNavBtn.classList, sectionAbout);
-
+// Revealing scroll-to-nav button
 const revealScrollBtn = function (entries) {
   const [entry] = entries;
-  console.log(entry);
+
   if (entry.isIntersecting) scrollToNavBtn.classList.add("hidden");
   else scrollToNavBtn.classList.remove("hidden");
 };
@@ -89,16 +58,17 @@ const sectionIntroductionObserver = new IntersectionObserver(revealScrollBtn, {
 
 sectionIntroductionObserver.observe(sectionIntroduction);
 
+// Scrolling to top of the page (to navigation bar)
 scrollToNavBtn.addEventListener("click", () =>
   header.scrollIntoView({ behavior: "smooth" })
 );
 
-const sections = document.querySelectorAll(".section");
-
+// Revealing section
 const revealSection = function (entries) {
   const [entry] = entries;
-
   entry.target.classList.remove("section-shifted");
+
+  sectionObserver.unobserve(entry.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
@@ -108,19 +78,57 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 sections.forEach((section) => sectionObserver.observe(section));
 
-[menuBtn, closeMenuBtn].forEach((btn) =>
+/////////////////////////
+// PROJECT SECTION
+////////////////////////
+
+const openProjectModal = function (projectModalType) {
+  overlay.classList.remove("hidden");
+  projectModalType.classList.remove("hidden");
+};
+
+const closeProjectModal = function (projectModalType) {
+  overlay.classList.add("hidden");
+  projectModalType.classList.add("hidden");
+};
+
+seeMoreBtns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
-    menuBtn.classList.toggle("hidden");
-    closeMenuBtn.classList.toggle("hidden");
-    navEl.classList.toggle("nav-open");
-    document.body.classList.toggle("no-scroll");
+    const target = e.target;
+    const projectType = target.dataset.type;
+    const projectModalType = document.querySelector(
+      `.project-details-${projectType}`
+    );
+    const exitBtn = projectModalType.querySelector(".btn-exit");
+
+    openProjectModal(projectModalType);
+
+    [exitBtn, overlay].forEach((el) =>
+      el.addEventListener(
+        "click",
+        closeProjectModal.bind(null, projectModalType)
+      )
+    );
   })
 );
 
-// navLinks.forEach((link) =>
-//   link.addEventListener("click", function (e) {
-//     const linkName = window.location.hash.slice(1);
-//     console.log(linkName);
-//     // const chosenSection =
-//   })
-// );
+////////////////////////////////
+// MOBILE NAVIGATION
+///////////////////////////////
+const openNavigationMobile = function () {
+  menuBtn.classList.toggle("hidden");
+  closeMenuBtn.classList.toggle("hidden");
+  navEl.classList.toggle("nav-open");
+  document.body.classList.toggle("no-scroll");
+};
+
+const closeNavigationMobile = function () {
+  closeMenuBtn.classList.add("hidden");
+  navEl.classList.remove("nav-open");
+  menuBtn.classList.remove("hidden");
+  document.body.classList.remove("no-scroll");
+};
+
+[menuBtn, closeMenuBtn].forEach((btn) =>
+  btn.addEventListener("click", openNavigationMobile)
+);

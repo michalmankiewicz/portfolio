@@ -44,9 +44,10 @@ body {
 /* HEADER & NAV */
 
 .header {
+  max-width: 130rem;
   padding: 1.2rem 2.4rem 0 2.4rem;
   /* border-bottom: 1px solid #333; */
-  margin-bottom: 3.6rem;
+  margin: 0 auto 3.6rem auto;
   /* background-color: white; */
 
   display: flex;
@@ -264,7 +265,7 @@ body {
   border-radius: 50px;
   color: var(--white-color);
   text-transform: uppercase;
-
+  text-decoration: none;
   transition: all 0.3s ease-in;
 }
 
@@ -279,11 +280,6 @@ body {
 }
 
 /* ABOUT SECTION*/
-
-.section-about {
-  position: relative;
-  margin-bottom: 3.2rem;
-}
 
 .section-about .content {
   background-color: #dfe4ea;
@@ -343,6 +339,10 @@ body {
 }
 
 /* PROJECTS */
+
+.section-projects .content {
+  padding-bottom: 0;
+}
 
 .projects {
   /* padding-bottom: 3.2rem; */
