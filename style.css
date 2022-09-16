@@ -423,6 +423,27 @@ body {
   background-image: url("img/3x2\ portfolio.PNG");
 }
 
+.project.tutor-remote {
+  background-image: url("img/tutor-remote\ logo.PNG");
+  position: relative;
+}
+.project.tutor-remote:hover {
+  background-image: url("img/3x2\ tutor-remote.PNG");
+}
+
+.project.project.tutor-remote::after {
+  content: "React";
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.8rem 5rem;
+  transform: rotate(45deg);
+  right: -8%;
+  top: 6%;
+}
+
 /* PROJECT DETAILS */
 
 .project-details {
@@ -514,7 +535,7 @@ body {
 .what-i-learnt li {
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.8rem;
   margin-bottom: 0.4rem;
 }
