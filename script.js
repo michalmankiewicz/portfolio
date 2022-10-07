@@ -99,15 +99,12 @@ seeMoreBtns.forEach((btn) =>
     const projectModalType = document.querySelector(
       `.project-details-${projectType}`
     );
-    const exitBtn = projectModalType.querySelector(".btn-exit");
 
     openProjectModal(projectModalType);
 
-    [exitBtn, overlay].forEach((el) =>
-      el.addEventListener(
-        "click",
-        closeProjectModal.bind(null, projectModalType)
-      )
+    overlay.addEventListener(
+      "click",
+      closeProjectModal.bind(null, projectModalType)
     );
   })
 );

@@ -323,10 +323,13 @@ body {
 }
 
 .techs {
+  width: 80%;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin: auto;
+  /* margin-left: 0; */
   gap: 0.8rem;
 }
 
@@ -431,7 +434,7 @@ body {
   background-image: url("img/3x2\ tutor-remote.PNG");
 }
 
-.project.project.tutor-remote::after {
+.project.tutor-remote::after {
   content: "React";
   position: absolute;
   background-color: var(--primary-color);
@@ -442,6 +445,27 @@ body {
   transform: rotate(45deg);
   right: -8%;
   top: 6%;
+}
+
+.project.crypto-reactions {
+  background-image: url("img/crypto-reactions-logo.PNG");
+  position: relative;
+}
+.project.crypto-reactions:hover {
+  background-image: url("img/3x2\ crypto-reactions.PNG");
+}
+
+.project.crypto-reactions::after {
+  content: "Redux&TS";
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.8rem 5rem;
+  transform: rotate(45deg);
+  right: -11%;
+  top: 8%;
 }
 
 /* PROJECT DETAILS */
@@ -458,7 +482,7 @@ body {
 
   border-radius: 20px;
   overflow: hidden;
-  background-color: var(--white-color);
+  background-color: var(--background-color-2);
 }
 
 .project-img-container {
@@ -488,7 +512,8 @@ body {
   font-size: 1.6rem;
   padding: 0.8rem 1.6rem;
   font-weight: 500;
-  background-color: var(--white-color);
+  background-color: var(--background-color-2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   text-transform: uppercase;
   border-radius: 8px;
 
@@ -587,7 +612,7 @@ body {
   font-size: 4.2rem;
   background: none;
   border: none;
-  color: var(--white-color);
+  color: var(--font-color);
 }
 
 .btn-exit:hover {
